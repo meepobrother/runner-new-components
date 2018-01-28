@@ -91,6 +91,12 @@ var ReactComponent = (function () {
         this.onClick.emit(e);
     };
     /**
+     * @return {?}
+     */
+    ReactComponent.prototype.createGuid = function () {
+        return guid();
+    };
+    /**
      * @param {?} state
      * @return {?}
      */
@@ -241,6 +247,7 @@ ReactComponent.propDecorators = {
     "propsChange": [{ type: core.Output },],
     "onClick": [{ type: core.Output },],
     "_onClick": [{ type: core.HostListener, args: ['click', ['$event'],] },],
+    "_id": [{ type: core.HostBinding, args: ['attr.id',] },],
 };
 /**
  * @fileoverview added by tsickle

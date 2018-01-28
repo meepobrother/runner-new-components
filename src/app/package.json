@@ -1,0 +1,24 @@
+{
+    "name": "runner-new-component",
+    "version": "1.4.0",
+    "repository": "https://github.com/meepobrother/runner-new-component",
+    "author": "david <david@spektrakel.de>",
+    "license": "MIT",
+    "private": false,
+    "peerDependencies": {
+        "@angular/core": "*",
+        "rxjs": "*"
+    },
+    "scripts": {
+        "git": "git add . && git commit -m 'update to save' && git push origin master"
+    },
+    "ngPackage": {
+        "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+        "dest": "./publish/runner-new-component",
+        "workingDirectory": "./.ng_build",
+        "lib": {
+            "entryFile": "./public_api.ts"
+        }
+    },
+    "dependencies": {}
+}

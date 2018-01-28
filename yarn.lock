@@ -6636,13 +6636,41 @@ websocket-extensions@>=0.1.1:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.3.tgz#5d2ff22977003ec687a4b87073dfbbac146ccf29"
 
+weui-badge@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/weui-badge/-/weui-badge-1.4.0.tgz#c3112e14abc9c2711ed2593a208875f3bcf491ff"
+
 weui-button@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/weui-button/-/weui-button-1.4.0.tgz#1181a0536b24282373dcd09ed09bbad8570a8108"
 
+weui-flex@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/weui-flex/-/weui-flex-1.4.0.tgz#5d7ff46d84ae43f5981b293ae8a1856cc3227ac6"
+
+weui-geolocation@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/weui-geolocation/-/weui-geolocation-1.4.0.tgz#453aa27885fe91e34f0ed04a4ad784ecdb0faa8f"
+
+weui-grids@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/weui-grids/-/weui-grids-1.4.0.tgz#91f5e62ce730b8b48926747b48753ebd1a2b9f2a"
+
+weui-image@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/weui-image/-/weui-image-1.4.0.tgz#8f79c914d2b55a36f07e5344e71101d2e78b830c"
+
 weui-input-cell@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/weui-input-cell/-/weui-input-cell-1.4.0.tgz#7f07328137d120234578dca97130126277f81455"
+
+weui-locpicker@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/weui-locpicker/-/weui-locpicker-1.4.0.tgz#cc53ecfa45844ddd30c03c43a89ad0306747292d"
+
+weui-swiper@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/weui-swiper/-/weui-swiper-1.4.0.tgz#4dd25a2309399cd5c4fb11b6673d34ab956a43d9"
 
 weui@^1.1.2:
   version "1.1.2"

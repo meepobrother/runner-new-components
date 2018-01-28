@@ -31,8 +31,15 @@
     "normalize.css": "^7.0.0",
     "rxjs": "^5.5.2",
     "weui": "^1.1.2",
+    "weui-badge": "^1.4.0",
     "weui-button": "^1.4.0",
+    "weui-flex": "^1.4.0",
+    "weui-geolocation": "^1.4.0",
+    "weui-grids": "^1.4.0",
+    "weui-image": "^1.4.0",
     "weui-input-cell": "^1.4.0",
+    "weui-locpicker": "^1.4.0",
+    "weui-swiper": "^1.4.0",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {

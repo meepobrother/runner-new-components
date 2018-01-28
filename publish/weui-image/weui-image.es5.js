@@ -8,7 +8,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { Component, Directive, ElementRef, EventEmitter, HostListener, Input, KeyValueDiffers, Output, Renderer2, TemplateRef, ViewContainerRef } from '@angular/core';
+import { Component, Directive, ElementRef, EventEmitter, HostBinding, HostListener, Input, KeyValueDiffers, Output, Renderer2, TemplateRef, ViewContainerRef } from '@angular/core';
 import 'rxjs/add/operator/share';
 /**
  * @fileoverview added by tsickle
@@ -85,6 +85,12 @@ var ReactComponent = (function () {
      */
     ReactComponent.prototype._onClick = function (e) {
         this.onClick.emit(e);
+    };
+    /**
+     * @return {?}
+     */
+    ReactComponent.prototype.createGuid = function () {
+        return guid();
     };
     /**
      * @param {?} state
@@ -237,6 +243,7 @@ ReactComponent.propDecorators = {
     "propsChange": [{ type: Output },],
     "onClick": [{ type: Output },],
     "_onClick": [{ type: HostListener, args: ['click', ['$event'],] },],
+    "_id": [{ type: HostBinding, args: ['attr.id',] },],
 };
 /**
  * @fileoverview added by tsickle
@@ -384,7 +391,7 @@ var WeuiImagePreviewComponent = (function (_super) {
 WeuiImagePreviewComponent.decorators = [
     { type: Component, args: [{
                 selector: 'weui-image-preview',
-                template: "\n\n    ",
+                template: "\n      <img [style.width.px]=\"props.width\" [style.height.px]=\"props.height\" [style.border-radius.%]=\"props['border-radius']\" [src]=\"props.src\" [ngStyle]=\"props.style\" alt=\"\">\n      <ng-container *ngComponent=\"props.children;preview: true;\"></ng-container>\n    ",
                 styles: ["\n\n    "]
             },] },
 ];
@@ -421,7 +428,7 @@ var WeuiImageSettingComponent = (function (_super) {
 WeuiImageSettingComponent.decorators = [
     { type: Component, args: [{
                 selector: 'weui-image-setting',
-                template: "\n\n    ",
+                template: "\n      <div class=\"weui-cells weui-cells_form\" [class.focus]=\"props.focus\">\n          <div class=\"weui-cell\">\n              <div class=\"weui-cell__hd\">\n                  <label class=\"weui-label\">\u5BBD\u5EA6</label>\n              </div>\n              <div class=\"weui-cell__bd\">\n                  <input class=\"weui-input\" type=\"number\" placeholder=\"\u5BBD\u5EA6\" [(ngModel)]=\"props.width\">\n              </div>\n          </div>\n          <div class=\"weui-cell\">\n              <div class=\"weui-cell__hd\">\n                  <label class=\"weui-label\">\u9AD8\u5EA6</label>\n              </div>\n              <div class=\"weui-cell__bd\">\n                  <input class=\"weui-input\" type=\"number\" placeholder=\"\u9AD8\u5EA6\" [(ngModel)]=\"props.height\">\n              </div>\n          </div>\n          <div class=\"weui-cell\">\n              <div class=\"weui-cell__hd\">\n                  <label class=\"weui-label\">\u5706\u89D2</label>\n              </div>\n              <div class=\"weui-cell__bd\">\n                  <input class=\"weui-input\" type=\"number\" placeholder=\"\u5706\u89D2\" [(ngModel)]=\"props['border-radius']\">\n              </div>\n          </div>\n      </div>\n\n      <ng-container *ngComponent=\"props.children;preview: false;\"></ng-container>\n    ",
                 styles: ["\n\n    "]
             },] },
 ];

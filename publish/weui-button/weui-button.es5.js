@@ -8,7 +8,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { Component, Directive, ElementRef, EventEmitter, HostListener, Input, KeyValueDiffers, Output, Renderer2, TemplateRef, ViewContainerRef } from '@angular/core';
+import { Component, Directive, ElementRef, EventEmitter, HostBinding, HostListener, Input, KeyValueDiffers, Output, Renderer2, TemplateRef, ViewContainerRef } from '@angular/core';
 import 'rxjs/add/operator/share';
 /**
  * @fileoverview added by tsickle
@@ -85,6 +85,12 @@ var ReactComponent = (function () {
      */
     ReactComponent.prototype._onClick = function (e) {
         this.onClick.emit(e);
+    };
+    /**
+     * @return {?}
+     */
+    ReactComponent.prototype.createGuid = function () {
+        return guid();
     };
     /**
      * @param {?} state
@@ -237,6 +243,7 @@ ReactComponent.propDecorators = {
     "propsChange": [{ type: Output },],
     "onClick": [{ type: Output },],
     "_onClick": [{ type: HostListener, args: ['click', ['$event'],] },],
+    "_id": [{ type: HostBinding, args: ['attr.id',] },],
 };
 /**
  * @fileoverview added by tsickle

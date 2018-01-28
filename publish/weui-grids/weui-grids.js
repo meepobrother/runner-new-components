@@ -78,6 +78,12 @@ var ReactComponent = /** @class */ (function () {
         this.onClick.emit(e);
     };
     /**
+     * @return {?}
+     */
+    ReactComponent.prototype.createGuid = function () {
+        return guid();
+    };
+    /**
      * @param {?} state
      * @return {?}
      */
@@ -228,6 +234,7 @@ ReactComponent.propDecorators = {
     "propsChange": [{ type: Output },],
     "onClick": [{ type: Output },],
     "_onClick": [{ type: HostListener, args: ['click', ['$event'],] },],
+    "_id": [{ type: HostBinding, args: ['attr.id',] },],
 };
 /**
  * @fileoverview added by tsickle
@@ -365,7 +372,6 @@ class WeuiGridPreviewComponent extends ReactComponent {
      */
     ngOnInit() {
         this._width = this.props.width;
-        console.log(this.props);
     }
     /**
      * @return {?}
@@ -426,7 +432,7 @@ WeuiGridSettingComponent.decorators = [
     { type: Component, args: [{
                 selector: 'weui-grid-setting',
                 template: `
-
+      <h2 class="title">weui grid</h2>
     `,
                 styles: [`
 
@@ -510,7 +516,7 @@ WeuiGridsSettingComponent.decorators = [
     { type: Component, args: [{
                 selector: 'weui-grids-setting',
                 template: `
-
+      <h2 class="title">weui grids</h2>
     `,
                 styles: [`
 
@@ -543,7 +549,7 @@ const preview = {
 const entrys = [
     WeuiGridSettingComponent,
     WeuiGridPreviewComponent,
-    WeuiGridPreviewComponent,
+    WeuiGridsSettingComponent,
     WeuiGridsPreviewComponent
 ];
 

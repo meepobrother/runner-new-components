@@ -1,4 +1,4 @@
-import { Component, Directive, ElementRef, EventEmitter, HostListener, Input, KeyValueDiffers, Output, Renderer2, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, Directive, ElementRef, EventEmitter, HostBinding, HostListener, Input, KeyValueDiffers, Output, Renderer2, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
 import 'rxjs/add/operator/share';
 import { fromEvent as fromEvent$1 } from 'rxjs/observable/fromEvent';
 import { merge as merge$1 } from 'rxjs/observable/merge';
@@ -80,6 +80,12 @@ var ReactComponent = /** @class */ (function () {
      */
     ReactComponent.prototype._onClick = function (e) {
         this.onClick.emit(e);
+    };
+    /**
+     * @return {?}
+     */
+    ReactComponent.prototype.createGuid = function () {
+        return guid();
     };
     /**
      * @param {?} state
@@ -232,6 +238,7 @@ ReactComponent.propDecorators = {
     "propsChange": [{ type: Output },],
     "onClick": [{ type: Output },],
     "_onClick": [{ type: HostListener, args: ['click', ['$event'],] },],
+    "_id": [{ type: HostBinding, args: ['attr.id',] },],
 };
 /**
  * @fileoverview added by tsickle

@@ -91,6 +91,12 @@ var ReactComponent = (function () {
         this.onClick.emit(e);
     };
     /**
+     * @return {?}
+     */
+    ReactComponent.prototype.createGuid = function () {
+        return guid();
+    };
+    /**
      * @param {?} state
      * @return {?}
      */
@@ -241,6 +247,7 @@ ReactComponent.propDecorators = {
     "propsChange": [{ type: core.Output },],
     "onClick": [{ type: core.Output },],
     "_onClick": [{ type: core.HostListener, args: ['click', ['$event'],] },],
+    "_id": [{ type: core.HostBinding, args: ['attr.id',] },],
 };
 /**
  * @fileoverview added by tsickle
@@ -381,7 +388,6 @@ var WeuiGridPreviewComponent = (function (_super) {
      */
     WeuiGridPreviewComponent.prototype.ngOnInit = function () {
         this._width = this.props.width;
-        console.log(this.props);
     };
     /**
      * @return {?}
@@ -439,7 +445,7 @@ var WeuiGridSettingComponent = (function (_super) {
 WeuiGridSettingComponent.decorators = [
     { type: core.Component, args: [{
                 selector: 'weui-grid-setting',
-                template: "\n\n    ",
+                template: "\n      <h2 class=\"title\">weui grid</h2>\n    ",
                 styles: ["\n\n    "]
             },] },
 ];
@@ -518,7 +524,7 @@ var WeuiGridsSettingComponent = (function (_super) {
 WeuiGridsSettingComponent.decorators = [
     { type: core.Component, args: [{
                 selector: 'weui-grids-setting',
-                template: "\n\n    ",
+                template: "\n      <h2 class=\"title\">weui grids</h2>\n    ",
                 styles: ["\n\n    "]
             },] },
 ];
@@ -547,7 +553,7 @@ var preview = {
 var entrys = [
     WeuiGridSettingComponent,
     WeuiGridPreviewComponent,
-    WeuiGridPreviewComponent,
+    WeuiGridsSettingComponent,
     WeuiGridsPreviewComponent
 ];
 
