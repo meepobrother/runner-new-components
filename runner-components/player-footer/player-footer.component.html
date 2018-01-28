@@ -1,0 +1,15 @@
+<div class="player-footer" #container style="display: block;">
+  <div class="player url">
+    <img [src]="item.avatar">
+    <div class="mask">
+      <div class="play need-active" (click)="onPlay()"></div>
+    </div>
+    <div class="info">
+      <span class="title">{{item.tag}}-{{item.poiname}}</span>
+      <span class="name">
+        <span class="author">{{item.nickname}}</span>&nbsp;-&nbsp;
+        <span class="cur">{{item.create_time}}</span></span>
+    </div>
+    <div class="download need-active" (click)="onTouch()"></div>
+  </div>
+</div>
